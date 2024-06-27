@@ -11,51 +11,32 @@ $dbname= "imobiliaria";
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
     <title>Imobiliaria</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
   </head>
-  <body class="p-3 m-0 border-0 bd-example m-0 border-0">
+  <body class="container">
     
-
-    <!-- Example Code -->
-    
-        
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-custom">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="index.php">HOME</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav">
-            
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+  <header>
+  <nav class="navbar">
+        <a class="navbar-home" href="index.php">HOME</a>
+        <div class="navbar-listas" id="navbar-listas">
+          <ul class="navbar-lista">
+            <li class="nav-item">
+              <a class="nav-link" href="cadastrar_imoveis.php" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Cadastro
               </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="cadastrar_imoveis.php">Cadastrar Imovel</a></li>
-                <li><a class="dropdown-item" href="cadastrar_usuarios.php">Cadastrar Usuário</a></li>
-                
-              </ul>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              </li>
+            <li class="nav-item">
+              <a class="nav-link" href="listar_imoveis.php" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Imoveis
               </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="listar_imoveis.php">Listar Imoveis</a></li>
-              </ul>
             </li>
 
           </ul>
         </div>
-      </div>
-    </nav>
+      </nav>
+      <h1 class="titulo">IMOBILIARIA</h1>
+  </header>
 
-      
-    <!-- End Example Code -->
   </body>
 </html>

@@ -1,0 +1,109 @@
+body {
+    display: flex;
+    flex-direction: column;
+    background-image: url(./imagens/building-410266_1280.jpg);
+    background-size: cover;
+    margin: 40px;
+}
+
+.container {
+    background-color: rgb(240, 240, 240);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sobre_nos {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    margin: 40px;
+    gap: 60px;
+}
+
+.quem_somos {
+    background-color: rgb(201, 201, 201);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+
+.nossa_historia {
+    background-color: rgb(201, 201, 201);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+
+.nosso_objetivo {
+    background-color: rgb(201, 201, 201);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+
+.dados {
+    text-align: center;
+}
+
+.titulo {
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+    padding: 30px;
+    color: white;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+h3 {
+    display: flex;
+    font-size: 40px;
+    justify-content: center;
+}
+
+p {
+    font-size: 20px;
+    text-indent: 1.4rem;
+    line-height: 1.6rem;
+}
+
+
+
+.navbar-home {
+    font-size: 30px;
+    padding-top: 17px;
+    text-decoration: none;
+    color: white;
+}
+
+.navbar-listas {
+    display: flex;
+    flex-direction: row;
+}
+
+.navbar-lista {
+    display: flex;
+    flex-direction: row;
+    gap: 60px;
+    list-style-type: none;
+}
+
+.nav-link {
+    font-size: 30px;
+    padding-top: 20px;
+    text-decoration: none;
+    color: white;
+}
+
+.nav-menu {
+    gap: 40px;
+}
+
+.ancora-item {
+    display: none;
+}
