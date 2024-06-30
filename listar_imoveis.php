@@ -1,8 +1,8 @@
 <?php
 //conectar com o banco
-$servername="localhost";
-$username="root";
-$password="usbw";
+$servername="marazul.mywire.org";
+$username="imobiliaria";
+$password="zbSbMdmRjmCMNP4J";
 $dbname="imobiliaria";
  
 $conn=mysqli_connect($servername, $username,$password, $dbname);
