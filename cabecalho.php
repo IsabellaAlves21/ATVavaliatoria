@@ -37,6 +37,5 @@ $dbname= "imobiliaria";
       </nav>
       <h1 class="titulo">IMOBILIARIA</h1>
   </header>
-
   </body>
 </html>

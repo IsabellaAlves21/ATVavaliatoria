@@ -1,12 +1,172 @@
+/* Area Geral */
+
 body {
     display: flex;
     flex-direction: column;
     background-image: url(./imagens/building-410266_1280.jpg);
     background-size: cover;
     margin: 40px;
+    gap: 40px;
 }
 
 .container {
+    background-color: rgb(240, 240, 240);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+h2 {
+    font-size: 40px;
+}
+
+h3 {
+    display: flex;
+    font-size: 30px;
+    justify-content: center;
+}
+
+h4 {
+    font-size: 25px;
+}
+
+p {
+    font-size: 20px;
+    text-indent: 1.4rem;
+    line-height: 1.6rem;
+}
+
+/* Area section Mosaico */
+
+.mosaico {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: white;
+    gap: 64px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 20px;
+}
+
+.primeira_img {
+    width: 80%;
+    height: 80%;
+}
+
+.primeira_imagem {
+    width: 78%;
+    height: 60%;
+    position: relative;
+    left: 100px;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+
+.imagens-secundarias {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 20px;
+    
+}
+
+.segunda_imagem {
+    width: 100%;
+    height: 100%;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+
+.terceira_imagem {
+    width: 100%;
+    height: 100%;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+
+/* Area focada em footer */
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    justify-content: center;
+    border-radius: 20px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-container a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-container a:hover {
+    text-decoration: underline;
+}
+
+.footer-left {
+    text-align: left;
+}
+
+.footer-center {
+    text-align: center;
+}
+
+.footer-right {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Area Cadastro */
+
+.formulario_cadastro {
+    display: flex;
+    background-color: rgb(240, 240, 240);
+    border-radius: 20px;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px;
+    margin: 0 auto;
+    border: 2px solid black;
+    width: 50%;
+}
+
+label{
+    font-size: 35px;
+}
+
+select{
+    font-size: 25px;
+}
+
+textarea{
+    font-size: 100%;
+}
+
+input{
+    font-size: 25px;
+}
+
+button {
+    font-size: 30px;
+    color: white;
+    background-color: green;
+    border: 2px solid green;
+    border-radius: 20px;
+}
+
+/* Area Home */
+
+.curiosidades {
     background-color: rgb(240, 240, 240);
     border-radius: 20px;
     display: flex;
@@ -59,20 +219,6 @@ body {
     flex-direction: row;
     justify-content: center;
 }
-
-h3 {
-    display: flex;
-    font-size: 40px;
-    justify-content: center;
-}
-
-p {
-    font-size: 20px;
-    text-indent: 1.4rem;
-    line-height: 1.6rem;
-}
-
-
 
 .navbar-home {
     font-size: 30px;

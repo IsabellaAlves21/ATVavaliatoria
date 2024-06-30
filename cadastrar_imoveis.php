@@ -1,10 +1,9 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-$servername="localhost";
-$username= "root";
-$password="usbw";
-$dbname= "imobiliaria";
-
+$servername="marazul.mywire.org";
+$username="imobiliaria";
+$password="zbSbMdmRjmCMNP4J";
+$dbname="imobiliaria";
 $conn = mysqli_connect($servername, $username, $password, $dbname);
 if (!$conn) {
   die("Conexão falhou: " . mysqli_connect_error());
@@ -40,9 +39,9 @@ if (!$conn) {
     <title>Bootstrap demo</title>
     <link rel="stylesheet" href="styles.css">
   </head>
-  <body>
+  <body class="container">
+<form  class="formulario_cadastro" method="post">
 <h2>Cadastrar Novo Imóvel</h2>
-<form  method="post">
 <label for="tipo">Tipo de Imóvel:</label>
 <select id="tipo" name="tipo">
 <option value="casa">Casa</option>
@@ -63,6 +62,27 @@ if (!$conn) {
 <input type="text" id="preco" name="preco"><br><br>
 <button type="submit">Cadastrar</button>
 </form>
- 
+<footer>
+        <div class="footer-container">
+            <div class="footer-left">
+                <h3>Imobiliaria</h3>
+                <p>&copy; 2024 Imobiliaria. Todos os direitos reservados.</p>
+            </div>
+            <div class="footer-center">
+                <h4>Contatos</h4>
+                <p>Email: contato@imobiliaria.com</p>
+                <p>Telefone: (11) 1234-5678</p>
+                <p>Endereço: Rua Exemplo, 123, Cidade, Estado</p>
+            </div>
+            <div class="footer-right">
+                <h4>Redes Sociais</h4>
+                <a href="#">Facebook</a>
+                <a href="#">Instagram</a>
+                <a href="#">Twitter</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
 </body>
 </html>
