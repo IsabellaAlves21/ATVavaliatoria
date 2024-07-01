@@ -1,12 +1,12 @@
-/* Area Geral */
+/* Área Geral */
 
 body {
     display: flex;
     flex-direction: column;
     background-image: url(./imagens/building-410266_1280.jpg);
     background-size: cover;
-    margin: 40px;
-    gap: 40px;
+    margin: 20px;
+    gap: 20px;
 }
 
 .container {
@@ -14,76 +14,181 @@ body {
     border-radius: 20px;
     display: flex;
     flex-direction: column;
-}
-
-h2 {
-    font-size: 40px;
+    gap: 64px;
 }
 
 h3 {
     display: flex;
-    font-size: 30px;
+    font-size: 25px;
     justify-content: center;
 }
 
 h4 {
-    font-size: 25px;
+    font-size: 20px;
 }
 
 p {
-    font-size: 20px;
+    font-size: 16px;
     text-indent: 1.4rem;
     line-height: 1.6rem;
 }
 
-/* Area section Mosaico */
+a {
+    color: black;
+    text-decoration: none;
+    transition: color 0.5s;
+}
+
+a:hover {
+    color: goldenrod;
+}
+
+label {
+    font-size: 25px;
+}
+
+select, input, textarea {
+    font-size: 100%;
+}
+
+#clock {
+    display: flex;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: white;
+    justify-content: center;
+}
+
+/* Animação botão */
+
+/* Estilo base do botão */
+.btn-enviar.btn3 {
+    font-size: 20px;
+    color: white;
+    background-color: green;
+    border: 2px solid green;
+    border-radius: 20px;
+    text-decoration: none;
+    display: inline-block;
+    padding: 16px 30px;
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.75);
+    font-family: Verdana, sans-serif;
+    transition: all 0.5s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    width: 200px; /* Tamanho inicial do botão */
+}
+
+/* Estilo adicional para o botão */
+.btn-enviar {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    width: 200px; /* Largura inicial */
+    transition: width 1s ease-in, background-color 0.5s ease-in;
+}
+
+/* Animação ao passar o mouse */
+.btn-enviar:hover {
+    background-color: rgb(62, 71, 60);
+    width: 250px; /* Largura ao passar o mouse */
+}
+
+/* Animação ao passar o mouse (ícone) */
+.btn-enviar:hover::after {
+    animation-name: plane_change;
+    animation-duration: 0.65s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: both;
+}
+
+/* Conteúdo adicional do botão (ícone) */
+.btn-enviar::after {
+    content: "\f1d8";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    opacity: 1;
+    position: absolute;
+    right: 10px;
+    transition: all 0.5s ease-in-out;
+}
+
+/* Keyframes para a animação do ícone */
+@keyframes plane_change {
+    0% {
+        transform: rotateZ(0);
+        right: 10px;
+        opacity: 1;
+        bottom: 0;
+    }
+    50% {
+        transform: rotateZ(20deg);
+        right: 25px;
+        opacity: 0.75;
+        bottom: 10px;
+    }
+    75% {
+        transform: rotateZ(-30deg);
+        bottom: 30px;
+        right: 40px;
+        opacity: 0.5;
+    }
+    100% {
+        transform: rotateZ(-50deg);
+        bottom: 50px;
+        right: 60px;
+        opacity: 0;
+    }
+}
+
+
+/* Área section Mosaico */
 
 .mosaico {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "segunda primeira"
+                         "terceira primeira";
     background-color: white;
-    gap: 64px;
-    padding-top: 40px;
-    padding-bottom: 40px;
-    padding-left: 20px;
+    padding: 20px;
 }
 
 .primeira_img {
-    width: 80%;
-    height: 80%;
+    width: 100%;
+    height: 100%;
+    grid-area: primeira;
 }
 
 .primeira_imagem {
-    width: 78%;
-    height: 60%;
-    position: relative;
-    left: 100px;
-    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    width: 100%;
+    height: 100%;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);   
 }
 
 .imagens-secundarias {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     width: 100%;
     gap: 20px;
-    
 }
 
-.segunda_imagem {
+.segunda_img {
+    grid-area: segunda;
+}
+
+.segunda_imagem, .terceira_imagem {
     width: 100%;
     height: 100%;
     box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
 }
 
-.terceira_imagem {
-    width: 100%;
-    height: 100%;
-    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+.terceira_img {
+    grid-area: terceira;
 }
 
-/* Area focada em footer */
+/* Área focada em footer */
 
 footer {
     background-color: #333;
@@ -96,7 +201,8 @@ footer {
 
 .footer-container {
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
@@ -111,22 +217,12 @@ footer {
     text-decoration: underline;
 }
 
-.footer-left {
-    text-align: left;
-}
-
-.footer-center {
+.footer-left, .footer-center, .footer-right {
+    margin-bottom: 20px;
     text-align: center;
 }
 
-.footer-right {
-    text-align: right;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-/* Area Cadastro */
+/* Área Cadastro */
 
 .formulario_cadastro {
     display: flex;
@@ -134,37 +230,17 @@ footer {
     border-radius: 20px;
     flex-direction: column;
     align-items: center;
-    padding: 60px;
+    padding: 30px;
     margin: 0 auto;
     border: 2px solid black;
-    width: 50%;
+    width: 90%;
 }
 
-label{
-    font-size: 35px;
-}
-
-select{
-    font-size: 25px;
-}
-
-textarea{
-    font-size: 100%;
-}
-
-input{
-    font-size: 25px;
-}
-
-button {
+.cadastrar_titulo {
     font-size: 30px;
-    color: white;
-    background-color: green;
-    border: 2px solid green;
-    border-radius: 20px;
 }
 
-/* Area Home */
+/* Área Home */
 
 .curiosidades {
     background-color: rgb(240, 240, 240);
@@ -177,28 +253,14 @@ button {
     display: flex;
     flex-direction: column;
     list-style-type: none;
-    margin: 40px;
-    gap: 60px;
+    margin: 20px;
+    gap: 30px;
 }
 
-.quem_somos {
+.quem_somos, .nossa_historia, .nosso_objetivo {
     background-color: rgb(201, 201, 201);
     border-radius: 20px;
-    padding: 20px;
-    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-}
-
-.nossa_historia {
-    background-color: rgb(201, 201, 201);
-    border-radius: 20px;
-    padding: 20px;
-    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-}
-
-.nosso_objetivo {
-    background-color: rgb(201, 201, 201);
-    border-radius: 20px;
-    padding: 20px;
+    padding: 10px;
     box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
 }
 
@@ -209,19 +271,22 @@ button {
 .titulo {
     display: flex;
     justify-content: center;
-    font-size: 50px;
-    padding: 30px;
+    font-size: 30px;
+    padding: 15px;
     color: white;
 }
+
+/* Área cabeçalho */
 
 .navbar {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    gap: 10px;
 }
 
 .navbar-home {
-    font-size: 30px;
+    font-size: 25px;
     padding-top: 17px;
     text-decoration: none;
     color: white;
@@ -230,26 +295,95 @@ button {
 .navbar-listas {
     display: flex;
     flex-direction: row;
+    align-items: center;
 }
 
 .navbar-lista {
     display: flex;
     flex-direction: row;
-    gap: 60px;
+    gap: 30px;
     list-style-type: none;
 }
 
 .nav-link {
-    font-size: 30px;
-    padding-top: 20px;
+    font-size: 25px;
+    padding-top: 10px;
     text-decoration: none;
     color: white;
 }
 
 .nav-menu {
-    gap: 40px;
+    gap: 20px;
 }
 
 .ancora-item {
     display: none;
+}
+
+/* Área Listar Imoveis */ 
+
+.imovel_titulo {
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+table {
+    padding: 20px;
+}
+
+th {
+    font-size: 25px;
+}
+
+td {
+    font-size: 18px;
+}
+
+/* Media Queries para Responsividade */
+
+@media (max-width: 768px) {
+    .mosaico {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "primeira"
+            "segunda"
+            "terceira";
+    }
+    
+    .cadastrar_titulo {
+        font-size: 25px;
+    }
+
+    textarea {
+        font-size: 10px;
+    }
+
+    th {
+        font-size: 14px;
+    }
+
+    td {
+        font-size: 10px;
+    }
+
+    .primeira_img, .segunda_img, .terceira_img {
+        width: 100%;
+        height: auto;
+    }
+    .imagens-secundarias {
+        width: 100%;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-left, .footer-center, .footer-right {
+        margin-bottom: 10px;
+    }
 }

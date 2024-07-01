@@ -11,7 +11,7 @@ $dbname= "imobiliaria";
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Imobiliaria</title>
+    <title>IMOBILIARIA</title>
     <link rel="stylesheet" href="styles.css">
   </head>
   <body class="container">
@@ -36,6 +36,10 @@ $dbname= "imobiliaria";
         </div>
       </nav>
       <h1 class="titulo">IMOBILIARIA</h1>
+      <div id="clock"></div>
+
+<script src="clock.js"></script>
   </header>
   </body>
+  <script src="https://kit.fontawesome.com/149b000a36.js" crossorigin="anonymous"></script>
 </html>

@@ -25,6 +25,7 @@
         </div>
     </section>
 
+    <h2></h2>
 
   <section class="curiosidades">
                 <ul class="sobre_nos">
@@ -55,7 +56,7 @@ A Imobiliária foi fundada em 1998 por João Silva, um visionário apaixonado pe
             <footer>
         <div class="footer-container">
             <div class="footer-left">
-                <h3>Imobiliaria</h3>
+                <h3>IMOBILIARIA</h3>
                 <p>&copy; 2024 Imobiliaria. Todos os direitos reservados.</p>
             </div>
             <div class="footer-center">

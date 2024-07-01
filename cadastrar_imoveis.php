@@ -36,12 +36,12 @@ if (!$conn) {
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
+    <title>IMOBILIARIA</title>
     <link rel="stylesheet" href="styles.css">
   </head>
   <body class="container">
 <form  class="formulario_cadastro" method="post">
-<h2>Cadastrar Novo Imóvel</h2>
+<h2 class="cadastrar_titulo">Cadastrar Novo Imóvel</h2>
 <label for="tipo">Tipo de Imóvel:</label>
 <select id="tipo" name="tipo">
 <option value="casa">Casa</option>
@@ -60,7 +60,7 @@ if (!$conn) {
 <input type="text" id="endereco" name="endereco"><br><br>
 <label for="preco">Preço:</label>
 <input type="text" id="preco" name="preco"><br><br>
-<button type="submit">Cadastrar</button>
+<button  class="btn-enviar btn3"type="submit">Cadastrar</button>
 </form>
 <footer>
         <div class="footer-container">

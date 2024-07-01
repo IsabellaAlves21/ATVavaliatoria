@@ -22,14 +22,14 @@ if(!$conn){
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Imobiliaria</title>
+    <title>IMOBILIARIA</title>
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
- <h1 class="titulo"> Imobiliaria</h1>
+ <h1 class="titulo"> IMOBILIARIA</h1>
  <?php include 'cabecalho.php';?>
- <h1>Imoveis</h1>
  <div class="container">
+ <h3 class="imovel_titulo">Imoveis</h1>
     <table class="table">
         <thead>
             <tr>
