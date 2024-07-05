@@ -15,6 +15,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 64px;
+    margin: 0 auto;
 }
 
 h3 {
@@ -49,6 +50,22 @@ label {
 
 select, input, textarea {
     font-size: 100%;
+}
+
+textarea {
+    font-size: 23px;
+}
+
+span {
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    background-color: green;
+    color: white;
+    border-radius: 20px;
+    border: 2px solid green;
+    margin: 0 auto;
+    padding: 10px;
 }
 
 #clock {
@@ -153,6 +170,8 @@ select, input, textarea {
                          "terceira primeira";
     background-color: white;
     padding: 20px;
+    margin: 0 auto;
+    width: 90%;
 }
 
 .primeira_img {
@@ -233,7 +252,7 @@ footer {
     padding: 30px;
     margin: 0 auto;
     border: 2px solid black;
-    width: 90%;
+    width: 85%;
 }
 
 .cadastrar_titulo {
@@ -247,6 +266,8 @@ footer {
     border-radius: 20px;
     display: flex;
     flex-direction: column;
+    margin: 0 auto;
+    width: 90%;
 }
 
 .sobre_nos {
@@ -271,7 +292,7 @@ footer {
 .titulo {
     display: flex;
     justify-content: center;
-    font-size: 30px;
+    font-size: 50px;
     padding: 15px;
     color: white;
 }
@@ -353,12 +374,19 @@ td {
             "segunda"
             "terceira";
     }
+
+    span {
+        font-size: 25px;
+      
+    }
     
     .cadastrar_titulo {
         font-size: 25px;
     }
 
     textarea {
+        padding-top: 20px;
+        padding-bottom: 20px;
         font-size: 10px;
     }
 
@@ -385,5 +413,59 @@ td {
 
     .footer-left, .footer-center, .footer-right {
         margin-bottom: 10px;
+    }
+    .formulario_cadastro {
+        display: flex;
+        background-color: rgb(240, 240, 240);
+        border-radius: 20px;
+        flex-direction: column;
+        align-items: center;
+        padding: 30px;
+        margin: 0 auto;
+        border: 2px solid black;
+        width: 80%;
+    }
+}
+
+@media (max-width: 400px) {    
+    textarea {
+        width: 150px;
+        padding: 10px;
+    }
+
+    span {
+        width: 100%;
+        font-size: 20px;
+        padding: 0px;
+    }
+
+    #tipo {
+        font-size: 20px;
+    }
+
+    #transacao {
+        font-size: 20px;
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+
+    #descricao {
+        font-size: 15px;
+    }
+
+    .titulo {
+        font-size: 40px;
+    }
+ 
+    .formulario_cadastro {
+        display: flex;
+        background-color: rgb(240, 240, 240);
+        border-radius: 20px;
+        flex-direction: column;
+        align-items: center;
+        padding: 30px;
+        margin: 0 auto;
+        border: 2px solid black;
+        width: 60%;
     }
 }

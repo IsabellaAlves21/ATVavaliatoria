@@ -19,7 +19,7 @@ if (!$conn) {
   $sql = "INSERT INTO imoveis (tipo, transacao, descricao, endereco,preco) VALUES ('$tipo', '$transacao', '$descricao', '$endereco ','$preco ')";
 
   if (mysqli_query($conn, $sql)) {
-      echo "Novo registro criado com sucesso";
+      echo "<span>Novo registro criado com sucesso</span>";
   } else {
       echo "Erro: " . $sql . "<br>" . mysqli_error($conn);
   }
